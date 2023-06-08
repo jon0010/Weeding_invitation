@@ -1,3 +1,18 @@
-.contenedorFooter {
-  color: yellow;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.footer-content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
