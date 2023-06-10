@@ -13,7 +13,7 @@ const MapModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyDoOTfEGHvehyEWudxbzpR6foEOoQSpPFw">
+    <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={center}
