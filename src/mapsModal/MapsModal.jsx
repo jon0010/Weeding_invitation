@@ -1,7 +1,6 @@
 import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import dotenv from "dotenv";
-dotenv.config();
+import { REACT_APP_GOOGLE_MAPS_API_KEY } from "../../variable.js";
 
 const MapModal = ({ isOpen, onClose }) => {
   const mapContainerStyle = {
@@ -15,7 +14,7 @@ const MapModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
+    <LoadScript googleMapsApiKey={REACT_APP_GOOGLE_MAPS_API_KEY}>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={center}
