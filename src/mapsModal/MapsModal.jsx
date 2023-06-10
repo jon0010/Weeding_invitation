@@ -1,5 +1,7 @@
 import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import dotenv from "dotenv";
+dotenv.config();
 
 const MapModal = ({ isOpen, onClose }) => {
   const mapContainerStyle = {
