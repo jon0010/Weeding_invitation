@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "./invitacion.css";
 import Countdown from "react-countdown";
+import iglesia from "../assets/iglesia.jpg";
+import MapModal from "../mapsModal/MapsModal";
+import EmailIcon from "@mui/icons-material/Email";
+import { styled } from "@mui/system";
+import siluetaM from "../assets/siluetaM.jpg";
+import siluetaF from "../assets/siluetaF.png";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import final from "../assets/final.jpg";
+import Footer from "../footer/Footer";
+
+const LargeEmailIcon = styled(EmailIcon)`
+  font-size: 5em; // Ajusta el tamaño según tus necesidades
+`;
 
 const Invitacion = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   const Completionist = <p>Se celebró la boda, ¡vivan los Novios!</p>;
 
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -58,7 +81,7 @@ const Invitacion = () => {
         </div>
         <Countdown date={targetDate} renderer={renderer} />
       </div>
-      <div className="t3 container">
+      <div className="t3">
         Con nuestro amor, la presencia de Dios entre nosotros y la bendición de
         nuestros padres
         <hr />
@@ -71,11 +94,76 @@ const Invitacion = () => {
           <hr />
           <div>
             <h3 className="padres">Padres del Novio</h3>
-            <p>Nombre Apellido</p>
-            <p>Nombre Apellido</p>
+            <p>Jose Wilde Vargas</p>
+            <p>Adriana Virginia Torres</p>
           </div>
         </div>
       </div>
+      <div className="t4">
+        Tu presencia es importante para nosotros, nos gustaria mucho que nos
+        acompañaras
+        <div>
+          <p>Ubicacion de la ceremonia</p>
+          <img src={iglesia} alt="fotoIglesia" className="iglesia" />
+          <br />
+          <p>Avenida presidente peron 2758 - San justo</p>
+          <button onClick={handleButtonClick}>Ver ubicacion</button>
+        </div>
+        {modalIsOpen && (
+          <div className="modal-body">
+            <MapModal />
+            <button onClick={closeModal}>Cerrar</button>
+          </div>
+        )}
+        {modalIsOpen}
+      </div>
+      <div className="t5">
+        <p>
+          ¡Que nos acompañes es lo más importante! Y sí está en tu disposición
+          realizar una muestra de cariño estaremos muy agradecidos
+        </p>
+      </div>
+
+      <div className="t6">
+        <h3>Lluvia de Sobres</h3>
+        <LargeEmailIcon /> <br /> "La lluvia de sobres, es la tradición de
+        regalar dinero en efectivo a los novios en un sobre el día del evento"{" "}
+        <br />
+        Gracias!! <br />
+        Espero verte en este día tan especial
+      </div>
+      <div className="t7">
+        <h3>Código de Vestimenta</h3>
+        <div className="medidaSilueta">
+          <img src={siluetaM} alt="siluetaH" className="medidaM" />
+          <div className="medidaSilueta">
+            <img src={siluetaF} alt="siluetaF" className="medidaF" />
+          </div>
+        </div>
+        Elegant Sport{" "}
+      </div>
+      <div className="t4">
+        <h3 className="t4">Contacto</h3>
+        <p>Tenes alguna consulta?? Comunicate con los novios!</p>
+        <div>
+          <button className="buttonCont">
+            <WhatsAppIcon /> Novia
+          </button>
+          <button className="buttonCont2">
+            <WhatsAppIcon /> Novio
+          </button>
+        </div>
+      </div>
+      <div className="fotoFinal">
+        <img src={final} alt="fotoFinal" />
+      </div>
+      <div className="t9">
+        <p>
+          ¡Que nos acompañes es lo más importante! Y sí está en tu disposición
+          realizar una muestra de cariño estaremos muy agradecidos
+        </p>
+      </div>
+      <Footer />
     </div>
   );
 };

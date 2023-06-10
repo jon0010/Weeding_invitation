@@ -1,8 +1,7 @@
 .footer {
-  position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 99vw;
 }
 
 .footer-container {
@@ -10,9 +9,10 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  background-color: aliceblue;
 }
 
 .footer-content {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   padding-bottom: 1rem;
 }

@@ -2,8 +2,9 @@ import React from "react";
 import "./App.css";
 import Sobre from "./sobre/Sobre";
 import Invitacion from "./invitacion/Invitacion";
-import Footer from "../src/footer/Footer";
 import { Route, Routes } from "react-router-dom";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
@@ -12,7 +13,6 @@ const App = () => {
         <Route path="/" element={<Sobre />} />
         <Route path="/invitacion" element={<Invitacion />} />
       </Routes>
-      <Footer />
     </div>
   );
 };

@@ -15,7 +15,7 @@
 
 .contenedorInvi {
   font-family: "mighaila", cursive;
-  background-image: url("../assets/flor.jpg");
+  background-image: url("../assets/flor1.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,19 +24,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1em;
 }
 
 .T1 {
-  font-size: 9em;
-  margin-top: 4em;
-  margin-right: 4.6em;
+  font-size: 12em;
+  margin-top: 3em;
+  margin-left: 4.8em;
 }
 
 .fechat1 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 2.5em;
-  margin-right: 16em;
+  margin-left: 23em;
   margin-bottom: 3em;
 }
 
@@ -45,7 +44,7 @@
   font-size: 2em;
   border: solid;
   border-style: double;
-  width: 97vw;
+  width: 99vw;
   text-align: center;
   background-color: white;
   padding: 0.6em;
@@ -97,11 +96,11 @@
   font-size: 5em;
   border: solid;
   border-style: double;
-  width: 97vw;
+  width: 99vw;
   text-align: center;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(231, 195, 164);
   padding: 0.6em;
-  color: aliceblue;
+  color: rgb(0, 0, 0);
 }
 
 .contt3 {
@@ -133,10 +132,130 @@
 .padres {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 0.5em;
-  margin-top: 0;
 }
 
-canvas {
-  width: 100%;
-  height: 100%;
+.t4 {
+  font-family: "signatra", cursive;
+  font-size: 2.7em;
+  border: solid;
+  border-style: double;
+  width: 99vw;
+  text-align: center;
+  background-color: white;
+  padding: 0.3em;
+}
+
+.iglesia {
+  width: 7em;
+  border-radius: 50% 50%;
+  box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.3);
+  background-color: aliceblue;
+}
+
+.t5 {
+  font-family: "mighaila", cursive;
+  font-size: 4.7em;
+  border: solid;
+  border-style: double;
+  width: 99vw;
+  text-align: center;
+  background-color: white;
+  padding: 0.3em;
+  margin-bottom: 2em;
+}
+
+.t6 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2em;
+  border: solid;
+  border-style: double;
+  width: 67vw;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.291);
+  padding: 0.3em;
+  line-height: 3em;
+  margin-bottom: 4em;
+}
+
+.t6 h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2em;
+  width: 66vw;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0.3em;
+}
+
+.t7 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2em;
+  border: solid;
+  border-style: double;
+  width: 99vw;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0.3em;
+  line-height: 2em;
+  margin-bottom: 2em;
+}
+
+.medidaSilueta {
+  width: 10em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 12em;
+}
+
+.medidaF {
+  height: 12.1em;
+  margin-left: 6em;
+}
+
+.medidaM {
+  height: 12.1em;
+  margin-left: 6em;
+}
+
+.buttonCont {
+  width: 3em;
+  margin-right: 6em;
+  margin-bottom: 3em;
+  margin-top: 1em;
+  background-color: #00a884;
+  color: aliceblue;
+  border: none;
+}
+
+.buttonCont2 {
+  margin-left: 10em;
+  background-color: #00a884;
+  color: aliceblue;
+  width: 3em;
+  border: none;
+}
+
+.fotoFinal {
+  background-image: url("../assets/gold.gif"), url("../assets/gold.gif"),
+    url("../assets/gold.gif");
+  background-attachment: fixed;
+  /* background-repeat: no-repeat, no-repeat, no-repeat; */
+  background-position: center, left center, right center;
+  background-size: contain, auto 100%, auto 100%;
+  width: 100vw;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.t9 {
+  font-family: "mighaila", cursive;
+  font-size: 4.7em;
+  border: solid;
+  border-style: double;
+  width: 99vw;
+  text-align: center;
+  background-color: white;
+  padding: 0.3em;
 }

@@ -1,10 +1,9 @@
 .logo {
   position: fixed;
-  transform: translate(-50%, -50%);
-  width: 15vw;
+  top: 15em;
+  right: 15em;
+  width: 18vw;
   animation: heartbeat 3.5s infinite;
-  margin-left: 54em;
-  margin-top: 20em;
 }
 
 @keyframes heartbeat {
@@ -17,18 +16,4 @@
   100% {
     transform: scale(1);
   }
-}
-
-.letrero {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-
-.mostrar-letrero {
-  opacity: 1;
 }
