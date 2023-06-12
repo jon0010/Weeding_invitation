@@ -137,8 +137,6 @@
 .t4 {
   font-family: "signatra", cursive;
   font-size: 2.7em;
-  border: solid;
-  border-style: double;
   width: 99vw;
   text-align: center;
   background-color: white;
@@ -153,8 +151,8 @@
 }
 
 .t5 {
-  font-family: "mighaila", cursive;
-  font-size: 4.7em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2em;
   border: solid;
   border-style: double;
   width: 99vw;
@@ -250,8 +248,8 @@
 }
 
 .t9 {
-  font-family: "mighaila", cursive;
-  font-size: 4.7em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2em;
   border: solid;
   border-style: double;
   width: 99vw;
