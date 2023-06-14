@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./invitacion.css";
 import Countdown from "react-countdown";
 import iglesia from "../assets/iglesia.jpg";
@@ -10,9 +10,10 @@ import siluetaF from "../assets/siluetaF.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import final from "../assets/final.jpg";
 import Footer from "../footer/Footer";
+import "animate.css";
 
 const LargeEmailIcon = styled(EmailIcon)`
-  font-size: 5em; // Ajusta el tamaño según tus necesidades
+  font-size: 5em;
 `;
 
 const Invitacion = () => {
@@ -24,6 +25,29 @@ const Invitacion = () => {
 
   const closeModal = () => {
     setModalIsOpen(false);
+  };
+
+  const sendMessageNovia = () => {
+    const numeroDestinatario = "+5491168930316";
+    const mensaje =
+      "Hola, soy camila, mandame un mensaje que ni bien lo veo te respondo! 🌞";
+    const url =
+      "https://wa.me/" +
+      numeroDestinatario +
+      "?text=" +
+      encodeURIComponent(mensaje);
+    window.open(url);
+  };
+
+  const sendMessageNovio = () => {
+    const numeroDestinatario = "+5491123930997";
+    ("Hola, soy brian, mandame un mensaje que ni bien lo veo te respondo! 🌞");
+    const url =
+      "https://wa.me/" +
+      numeroDestinatario +
+      "?text=" +
+      encodeURIComponent(mensaje);
+    window.open(url);
   };
 
   const Completionist = <p>Se celebró la boda, ¡vivan los Novios!</p>;
@@ -68,22 +92,26 @@ const Invitacion = () => {
       </div>
       <div className="fechat1">06-10-2023</div>
       <div className="t2">
-        El día más importante de nuestras vidas ha llegado y queremos que seas
-        parte de él
+        <div className="animation1">
+          El día más importante de nuestras vidas ha llegado y queremos que seas
+          parte de él
+        </div>
       </div>
       <div>
         <div className="contador">
           <div className="cajaContador">
-            <h2>Viernes 6 de Octubre 2023</h2>
-            <h2>¡Nos casamos!</h2>
-            <h2>Faltan:</h2>
+            <h2 className="animation2">Viernes 6 de Octubre 2023</h2>
+            <h2 className="animation2">¡Nos casamos!</h2>
+            <h2 className="animation2">Faltan:</h2>
           </div>
         </div>
         <Countdown date={targetDate} renderer={renderer} />
       </div>
       <div className="t3">
-        Con nuestro amor, la presencia de Dios entre nosotros y la bendición de
-        nuestros padres
+        <div className="animation3 animated">
+          Con nuestro amor, la presencia de Dios entre nosotros y la bendición
+          de nuestros padres
+        </div>
         <hr />
         <div className="contt3">
           <div>
@@ -100,10 +128,12 @@ const Invitacion = () => {
         </div>
       </div>
       <div className="t4">
-        Tu presencia es importante para nosotros, nos gustaria mucho que nos
-        acompañaras
+        <div className="animation4">
+          Tu presencia es importante para nosotros, nos gustaria mucho que nos
+          acompañaras
+        </div>
         <div>
-          <p>Ubicacion de la ceremonia</p>
+          <p className="animation4">Ubicacion de la ceremonia</p>
           <img src={iglesia} alt="fotoIglesia" className="iglesia" />
           <br />
           <p>Avenida presidente peron 2758 - San justo</p>
@@ -118,50 +148,56 @@ const Invitacion = () => {
         {modalIsOpen}
       </div>
       <div className="t5">
-        <p>
+        <div className="animation5">
           ¡Que nos acompañes es lo más importante! Y sí está en tu disposición
           realizar una muestra de cariño estaremos muy agradecidos
-        </p>
+        </div>
       </div>
 
       <div className="t6">
-        <h3>Lluvia de Sobres</h3>
-        <LargeEmailIcon /> <br /> "La lluvia de sobres, es la tradición de
-        regalar dinero en efectivo a los novios en un sobre el día del evento"{" "}
-        <br />
-        Gracias!! <br />
-        Espero verte en este día tan especial
+        <div className="animation6">
+          <h3>Lluvia de Sobres</h3>
+          <LargeEmailIcon /> <br /> "La lluvia de sobres, es la tradición de
+          regalar dinero en efectivo a los novios en un sobre el día del evento"{" "}
+          <br />
+          Gracias!! <br />
+          Espero verte en este día tan especial
+        </div>
       </div>
       <div className="t7">
-        <h3>Código de Vestimenta</h3>
-        <div className="medidaSilueta">
-          <img src={siluetaM} alt="siluetaH" className="medidaM" />
+        <div className="animation7">
+          <h3>Código de Vestimenta</h3>
           <div className="medidaSilueta">
-            <img src={siluetaF} alt="siluetaF" className="medidaF" />
+            <img src={siluetaM} alt="siluetaH" className="medidaM" />
+            <div className="medidaSilueta">
+              <img src={siluetaF} alt="siluetaF" className="medidaF" />
+            </div>
           </div>
+          Elegant Sport{" "}
         </div>
-        Elegant Sport{" "}
       </div>
       <div className="t4">
-        <h3 className="t4">Contacto</h3>
-        <p>Tenes alguna consulta?? Comunicate con los novios!</p>
-        <div>
-          <button className="buttonCont">
-            <WhatsAppIcon /> Novia
-          </button>
-          <button className="buttonCont2">
-            <WhatsAppIcon /> Novio
-          </button>
+        <div className="animation8">
+          <h3 className="t4">Contacto</h3>
+          <p>Tenes alguna consulta?? Comunicate con los novios!</p>
+          <div>
+            <button className="buttonCont" onClick={() => sendMessageNovia()}>
+              <WhatsAppIcon /> Novia
+            </button>
+            <button className="buttonCont2" onClick={() => sendMessageNovio()}>
+              <WhatsAppIcon /> Novio
+            </button>
+          </div>
         </div>
       </div>
       <div className="fotoFinal">
         <img src={final} alt="fotoFinal" />
       </div>
       <div className="t9">
-        <p>
+        <div className="animation9">
           ¡Que nos acompañes es lo más importante! Y sí está en tu disposición
           realizar una muestra de cariño estaremos muy agradecidos
-        </p>
+        </div>
       </div>
       <Footer />
     </div>
