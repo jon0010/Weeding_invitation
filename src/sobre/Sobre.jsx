@@ -23,7 +23,7 @@ const Sobre = () => {
           md={7}
           sx={{
             backgroundImage:
-              "url(https://scontent.feze12-1.fna.fbcdn.net/v/t39.30808-6/352133999_6275139392541758_8980223177570125181_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=UrNu3kfTZKEAX_0wN-x&_nc_oc=AQlRU6-rFMs2bOzg3jAH1j4LtEXT8objlhdzi0TLljGOITFcY828WSaH6IvwkNVMuilM8PNiLhsCH5W_bjD83uT2&_nc_ht=scontent.feze12-1.fna&oh=00_AfDsCcyDw3xqD-oWXFWsD_iS3JwwRbLvtBR8z_oqOsmlEA&oe=64872A44)",
+              "url(https://scontent.feze9-1.fna.fbcdn.net/v/t39.30808-6/352133999_6275139392541758_8980223177570125181_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeF319KWIBd7FtkBs3R-sFGgWqfsflh9TDlap-x-WH1MOaN-QBWo28JmXz6LkA6511tzz7Gx58IyyMCT3tm3CL2h&_nc_ohc=f0M3QMNT0ZwAX_eR4UV&_nc_oc=AQn0ILLoEcCBoCo9UlPVlv2xXHoJWzj0IBgvdXZoaYc2Mkf_C8oJmMQzInvJSR0NKrc7N6hqIwRRZlj3tz_PYarv&_nc_ht=scontent.feze9-1.fna&oh=00_AfBMZlE8yIL5FB_hiCbcUCc7RqTxVqm9S7pYi8_MrC1wQQ&oe=649307C4)",
             backgroundRepeat: "no-repeat",
             backgroundColor: (t) =>
               t.palette.mode === "light"
