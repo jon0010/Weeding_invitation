@@ -5,7 +5,7 @@ import iglesia from "../assets/iglesia.jpg";
 import MapModal from "../mapsModal/MapsModal";
 import EmailIcon from "@mui/icons-material/Email";
 import { styled } from "@mui/system";
-import siluetaM from "../assets/siluetaM.jpg";
+import siluetaM from "../assets/siluetaM.png";
 import siluetaF from "../assets/siluetaF.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import final from "../assets/final.jpg";
@@ -146,7 +146,7 @@ const Invitacion = () => {
   const targetDate = new Date("October 6, 2023").getTime();
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid backgroundContainer">
       <div className="row position-relative">
         <img src={zapatosFondo} className="bg-img-fluid" alt="fondo" />
         <div
