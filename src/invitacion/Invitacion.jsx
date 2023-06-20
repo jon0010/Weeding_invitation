@@ -360,8 +360,7 @@ const Invitacion = () => {
 
       <div className="row">
         <div className="col-12 text-center p-4 fs-2">
-          ¡Que nos acompañes es lo más importante! Y si está en tu disposición
-          realizar una muestra de cariño, estaremos muy agradecidos
+          Nos encantaría que nos acompañes en este día tan especial
         </div>
       </div>
       <Footer />
