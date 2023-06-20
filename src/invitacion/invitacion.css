@@ -15,205 +15,77 @@
   src: url("../assets/Signatra.ttf") format("truetype");
 }
 
-.contenedorInvi {
-  font-family: "mighaila", cursive;
-  background-image: url("../assets/flor1.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.T1 {
-  animation: fadeInDown;
-  animation-duration: 2s;
+.fontCustom {
+  font-family: "signatra", cursive;
 }
 
-.fechat1 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  animation: fadeInDown;
-  animation-duration: 2s;
-}
-
-.t2 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  border: solid;
-  border-style: double;
-  text-align: center;
-  background-color: white;
-}
-
-.t2 .animation1 {
-  animation: fadeInLeft;
-  animation-duration: 2s;
-}
-
-.contador {
+.fontCustom2 {
   font-family: "master", cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../assets/ring.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
 }
 
-.cajaContador {
-  font-family: "signatra", cursive;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.516);
-}
-
-.cajaContador .animation2 {
-  animation: fadeInUp;
-  animation-duration: 2s;
-}
-
-.cuadro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.49);
-}
-
-.t3 {
+.fontCustom3 {
   font-family: "mighaila", cursive;
-  border: solid;
-  border-style: double;
-  text-align: center;
-  background-color: rgb(231, 195, 164);
-  color: rgb(0, 0, 0);
 }
 
-.t3 .animation3 {
-  animation: fadeInLeft;
-  animation-duration: 2s;
+.countdown-box {
+  display: inline-block;
+  margin-right: 10px;
 }
 
-.contt3 {
-  font-family: "mighaila", cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeInUp;
-  animation-duration: 2s;
+.botonMapa {
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+  box-shadow: 0px 0px 0px 3px black;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #ffb700;
+  color: black;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+  transition: all 0.9s ease-in-out;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 
-.padres {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+.botonMapa:hover {
+  background-color: #ff2a00;
+  color: white;
 }
 
-.t4 {
-  font-family: "signatra", cursive;
-  text-align: center;
-  background-color: white;
+.botonMapa::before {
+  content: "🤵🏻";
+  position: absolute;
+  left: -0rem;
+  top: 0rem;
+  opacity: 1;
+  font-size: 1.55rem;
+  transition: all 0.9s ease-in-out;
+  transform: rotate(0deg);
 }
 
-.t4 .animation4 {
-  animation: fadeInLeft;
-  animation-duration: 2s;
+.botonMapa:hover::before {
+  content: "👰🏻";
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(40deg);
+  font-size: 2.5rem;
+  top: -0.75rem;
+  transition: all 0.9s ease-in-out;
+  animation: rightRun 2s forwards;
 }
 
-.iglesia {
-  box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.3);
-  background-color: aliceblue;
-  animation: fadeInUp;
-  animation-duration: 2s;
+.botonMapa:active::before {
+  content: "👰🏻";
 }
 
-.t5 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  border: solid;
-  border-style: double;
-  text-align: center;
-  background-color: white;
-}
-
-.t5 .animation5 {
-  animation: fadeInLeft;
-  animation-duration: 2s;
-}
-
-.t6 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  border: solid;
-  border-style: double;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.291);
-}
-
-.t6 .animation6 {
-  animation: fadeInUp;
-  animation-duration: 2s;
-}
-
-.t6 h3 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0);
-}
-
-.t7 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  border: solid;
-  border-style: double;
-  text-align: center;
-  background-color: rgb(255, 255, 255);
-}
-
-.t7 .animation7 {
-  animation: fadeInLeft;
-  animation-duration: 2s;
-}
-
-.medidaSilueta {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.buttonCont {
-  background-color: #00a884;
-  color: aliceblue;
-  border: none;
-}
-
-.buttonCont2 {
-  background-color: #00a884;
-  color: aliceblue;
-  border: none;
-}
-
-.fotoFinal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.t9 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  border: solid;
-  border-style: double;
-  text-align: center;
-  background-color: white;
-}
-
-.animation8 {
-  animation: fadeInUp;
-  animation-duration: 2s;
-}
-
-.t9 .animation9 {
-  animation: fadeInLeft;
-  animation-duration: 2s;
+@keyframes rightRun {
+  100% {
+    transform: translateX(197px);
+  }
 }
