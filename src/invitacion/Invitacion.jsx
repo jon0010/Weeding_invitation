@@ -10,7 +10,7 @@ import siluetaF from "../assets/siluetaF.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import final from "../assets/final.jpg";
 import Footer from "../footer/Footer";
-import ringCelu from "../assets/ringCelu.jpeg";
+import ringCelu2 from "../assets/ringCelu2.jpeg";
 import ringPC from "../assets/ringPC.jpeg";
 import "animate.css";
 
@@ -165,7 +165,7 @@ const Invitacion = () => {
     <div className="container-fluid backgroundContainer">
       <div className="row position-relative">
         <img
-          src={isMobile ? ringCelu : ringPC}
+          src={isMobile ? ringCelu2 : ringPC}
           className="bg-img-fluid"
           alt="fondo"
         />
@@ -176,9 +176,6 @@ const Invitacion = () => {
             textShadow: "0px 0px 10px gold",
           }}
         >
-          <span className="d-md-none" style={{ fontSize: ".6em" }}>
-            Camila & Brian
-          </span>
           <br className="d-md-none" />
           <span className="d-none d-md-inline" style={{ fontSize: ".9em" }}>
             Camila & Brian

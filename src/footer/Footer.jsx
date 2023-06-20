@@ -4,7 +4,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import "./footer.css";
 
 const Copyright = () => {
   return (
@@ -35,9 +34,10 @@ const Footer = () => {
         <Box className="footer-container">
           <Box component="footer" className="footer-content">
             <Container maxWidth="sm">
-              <Typography variant="body1" style={{ textAlign: "center" }}>
-                {/* Contenido del footer */}
-              </Typography>
+              <Typography
+                variant="body1"
+                style={{ textAlign: "center" }}
+              ></Typography>
               <Copyright />
             </Container>
           </Box>
