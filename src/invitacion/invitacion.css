@@ -15,6 +15,11 @@
   src: url("../assets/Signatra.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Birds";
+  src: url("../assets/Birds.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -30,6 +35,10 @@ body {
 
 .fontCustom3 {
   font-family: "mighaila", cursive;
+}
+
+.fontCustom4 {
+  font-family: "Birds", cursive;
 }
 
 .countdown-box {

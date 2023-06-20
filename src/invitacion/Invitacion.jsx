@@ -162,7 +162,7 @@ const Invitacion = () => {
   const targetDate = new Date("October 6, 2023").getTime();
 
   return (
-    <div className="container-fluid backgroundContainer">
+    <div className="container-fluid backgroundContainer m-0 p-0">
       <div className="row position-relative">
         <img
           src={isMobile ? ringCelu2 : ringPC}
@@ -186,7 +186,7 @@ const Invitacion = () => {
         <hr />
       </div>
       <div className="row">
-        <div className="col-12 text-center p-4 fs-2">
+        <div className="col-12 text-center p-4 fs-2 fontCustom4">
           {" "}
           El día más importante de nuestras vidas ha llegado y queremos que seas
           parte de él
@@ -210,32 +210,32 @@ const Invitacion = () => {
         <hr />
       </div>
       <div className="row">
-        <div className="col-12 text-center p-4 fs-2 mb-5">
+        <div className="col-12 text-center p-4 fs-2 mb-5 fontCustom4">
           Con nuestro amor, la bendición de Dios y la de nuestros padres
         </div>
       </div>
       <div className="row mx-auto d-flex justify-content-center flex-wrap text-center">
-        <div className="col-md-6 col-sm-12 mb-4">
-          <h3>Padres de la Novia</h3>
+        <div className="col-md-6 col-sm-12 mb-4 fontCustom4 fs-4">
+          <h3 className="fs-1">Padres de la Novia</h3>
           <p>Rubén Ricardo Pereyra</p>
           <p>Claudia Jacqueline Pascual</p>
         </div>
-        <div className="col-md-6 col-sm-12">
-          <h3>Padres del Novio</h3>
+        <div className="col-md-6 col-sm-12 fontCustom4 fs-4">
+          <h3 className="fs-1">Padres del Novio</h3>
           <p>Jose Wilder Vargas</p>
           <p>Adriana Virginia Torres</p>
         </div>
       </div>
       <hr />
       <div className="row">
-        <div className="col-12 text-center p-4 fs-2">
+        <div className="col-12 text-center p-4 fs-2 fontCustom4">
           Tu presencia es importante para nosotros, nos gustaría mucho que nos
           acompañaras
         </div>
       </div>
       <hr />
       <div className="row mb-5">
-        <div className="col-12 text-center p-3 fs-3">
+        <div className="col-12 text-center p-3 fs-3 fontCustom4">
           Ubicación de la ceremonia
         </div>
         <div className="col-12 text-center">
@@ -251,7 +251,7 @@ const Invitacion = () => {
             }}
           />
           <br />
-          <p className="col-12 text-center p-3 fs-4">
+          <p className="col-12 text-center p-3 fs-4 fontCustom2">
             Avenida Presidente Perón 2758 - San Justo
           </p>
           <button className="botonMapa mb-4" onClick={handleButtonClick}>
@@ -270,14 +270,14 @@ const Invitacion = () => {
       </div>
       <hr />
       <div className="row">
-        <div className="col-12 text-center p-4 fs-2">
+        <div className="col-12 text-center p-4 fs-2 fontCustom4">
           ¡Que nos acompañes es lo más importante! Y si está en tu disposición
           realizar una muestra de cariño, estaremos muy agradecidos
         </div>
       </div>
       <hr />
       <div className="row">
-        <div className="col-md-12 col-12 mx-auto text-center fs-4">
+        <div className="col-md-12 col-12 mx-auto text-center fs-3 fontCustom4">
           <h3 className="fs-1 mb-5">Lluvia de Sobres</h3>
           <LargeEmailIcon /> <br />
           <p className="mb-5">
@@ -290,8 +290,8 @@ const Invitacion = () => {
       </div>
       <hr />
       <div className="row">
-        <div className="col-md-12 col-12 mx-auto text-center">
-          <h3>Código de Vestimenta</h3>
+        <div className="col-md-12 col-12 mx-auto text-center fontCustom4">
+          <h3 className="fs-1">Código de Vestimenta</h3>
           <div className="row justify-content-center align-items-center mt-3">
             <div className="col-6">
               <img
@@ -315,9 +315,9 @@ const Invitacion = () => {
       </div>
       <hr />
       <div className="row text-center mb-5">
-        <div className="col-md-12 col-12 mx-auto">
+        <div className="col-md-12 col-12 mx-auto fontCustom4">
           <h3 className="fs-1">Contacto</h3>
-          <p className="fs-4 mt-4 mb-5">
+          <p className="fs-3 mt-4 mb-5">
             ¿Tienes alguna consulta? ¡Comunícate con los novios!
           </p>
           <div>
@@ -356,7 +356,7 @@ const Invitacion = () => {
       </div>
 
       <div className="row">
-        <div className="col-12 text-center p-4 fs-2">
+        <div className="col-12 text-center p-4 fs-2 fontCustom4">
           Nos encantaría que nos acompañes en este día tan especial
         </div>
       </div>
