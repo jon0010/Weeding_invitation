@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./invitacion.css";
 import Countdown from "react-countdown";
 import iglesia from "../assets/iglesia.jpg";
@@ -10,7 +10,8 @@ import siluetaF from "../assets/siluetaF.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import final from "../assets/final.jpg";
 import Footer from "../footer/Footer";
-import zapatosFondo from "../assets/zapatosfondo.jpeg";
+import ringCelu from "../assets/ringCelu.jpeg";
+import ringPC from "../assets/ringPC.jpeg";
 import "animate.css";
 
 const LargeEmailIcon = styled(EmailIcon)`
@@ -19,6 +20,21 @@ const LargeEmailIcon = styled(EmailIcon)`
 
 const Invitacion = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 576);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleButtonClick = () => {
     setModalIsOpen(true);
@@ -65,7 +81,7 @@ const Invitacion = () => {
               <div
                 className="countdown-box d-flex justify-content-start"
                 style={{
-                  border: "solid 1px brown",
+                  border: "solid 1px gold",
                   borderRadius: "1em",
                   width: "8em",
                   alignItems: "center",
@@ -83,7 +99,7 @@ const Invitacion = () => {
               <div
                 className="countdown-box d-flex justify-content-center"
                 style={{
-                  border: "solid 1px brown",
+                  border: "solid 1px gold",
                   borderRadius: "1em",
                   width: "8em",
                   alignItems: "center",
@@ -101,7 +117,7 @@ const Invitacion = () => {
               <div
                 className="countdown-box d-flex justify-content-center"
                 style={{
-                  border: "solid 1px brown",
+                  border: "solid 1px gold",
                   borderRadius: "1em",
                   width: "8em",
                   alignItems: "center",
@@ -121,7 +137,7 @@ const Invitacion = () => {
               <div
                 className="countdown-box d-flex justify-content-center"
                 style={{
-                  border: "solid 1px brown",
+                  border: "solid 1px gold",
                   borderRadius: "1em",
                   width: "8em",
                   alignItems: "center",
@@ -148,12 +164,16 @@ const Invitacion = () => {
   return (
     <div className="container-fluid backgroundContainer">
       <div className="row position-relative">
-        <img src={zapatosFondo} className="bg-img-fluid" alt="fondo" />
+        <img
+          src={isMobile ? ringCelu : ringPC}
+          className="bg-img-fluid"
+          alt="fondo"
+        />
         <div
-          className="col-md-6 col-sm mx-auto position-absolute top-50 start-50 translate-middle text-center text-dark fontCustom mt-1"
+          className="col-md-6 col-sm mx-auto position-absolute text-center text-dark fontCustom3 ms-2"
           style={{
-            fontSize: "8em",
-            textShadow: "4px 5px 5px rgba(100, 10, 10, 100.5)",
+            fontSize: "9em",
+            textShadow: "0px 0px 10px gold",
           }}
         >
           <span className="d-md-none" style={{ fontSize: ".6em" }}>
@@ -179,6 +199,7 @@ const Invitacion = () => {
 
       <div className="row">
         <div className="col-12 col-sm-8 mt-5 mx-auto text-center fontCustom2">
+          <h2>Te invitamos a nuestra boda</h2>
           <h2>Viernes 6 de Octubre 2023</h2>
           <h2>¡Nos casamos!</h2>
           <h2>Faltan:</h2>
@@ -193,8 +214,7 @@ const Invitacion = () => {
       </div>
       <div className="row">
         <div className="col-12 text-center p-4 fs-2 mb-5">
-          Con nuestro amor, la presencia de Dios entre nosotros y la bendición
-          de nuestros padres
+          Con nuestro amor, la bendición de Dios y la de nuestros padres
         </div>
       </div>
       <div className="row mx-auto d-flex justify-content-center flex-wrap text-center">
@@ -205,7 +225,7 @@ const Invitacion = () => {
         </div>
         <div className="col-md-6 col-sm-12">
           <h3>Padres del Novio</h3>
-          <p>Jose Wilde Vargas</p>
+          <p>Jose Wilder Vargas</p>
           <p>Adriana Virginia Torres</p>
         </div>
       </div>

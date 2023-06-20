@@ -43,7 +43,7 @@ body {
   border: 0;
   border-radius: 0.5rem;
   font-size: 1rem;
-  background-color: #ffb700;
+  background-color: rgb(255, 220, 20);
   color: black;
   font-weight: bolder;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -91,5 +91,5 @@ body {
 }
 
 .backgroundContainer {
-  background-color: #dabebe;
+  background-color: #d9c7c7;
 }
