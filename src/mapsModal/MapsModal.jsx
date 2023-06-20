@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import { REACT_APP_GOOGLE_MAPS_API_KEY } from "../../variable.js";
 
 const MapModal = ({ isOpen, onClose }) => {
   const mapContainerStyle = {
@@ -13,8 +12,17 @@ const MapModal = ({ isOpen, onClose }) => {
     lng: -58.561653, // Longitud del lugar
   };
 
+  const [googleMapsApiKey, setGoogleMapsApiKey] = useState("");
+
+  useEffect(() => {
+    fetch("/api/google-maps-api-key.js")
+      .then((response) => response.json())
+      .then((data) => setGoogleMapsApiKey(data.apiKey))
+      .catch((error) => console.error("Error fetching API key:", error));
+  }, []);
+
   return (
-    <LoadScript googleMapsApiKey={REACT_APP_GOOGLE_MAPS_API_KEY}>
+    <LoadScript googleMapsApiKey={googleMapsApiKey}>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={center}
