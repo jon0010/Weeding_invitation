@@ -27,4 +27,4 @@ dist-ssr
 *.sw?
 
 
-config.js
+variable.js
