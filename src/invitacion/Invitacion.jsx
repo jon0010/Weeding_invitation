@@ -159,7 +159,13 @@ const Invitacion = () => {
     }
   };
 
-  const targetDate = new Date("October 6, 2023").getTime();
+  const targetDate = new Date("October 6, 2023");
+  targetDate.setHours(19);
+  targetDate.setMinutes(0);
+  targetDate.setSeconds(0);
+  targetDate.setMilliseconds(0);
+
+  const targetDateTime = targetDate.getTime();
 
   return (
     <div className="container-fluid backgroundContainer m-0 p-0">
@@ -205,7 +211,7 @@ const Invitacion = () => {
 
       <div className="row">
         <div className="col-md-4 col-12 mx-auto d-flex justify-content-between flex-wrap mt-2 mb-3">
-          <Countdown date={targetDate} renderer={renderer} />
+          <Countdown date={targetDateTime} renderer={renderer} />
         </div>
         <hr />
       </div>
