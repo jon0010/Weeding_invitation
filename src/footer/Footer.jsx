@@ -14,7 +14,7 @@ const Footer = () => {
         component="footer"
         className="footer"
         sx={{
-          backgroundColor: "aliceblue",
+          backgroundColor: "rgba(255, 255, 255, 0.5)",
           py: 2,
           px: 0,
         }}

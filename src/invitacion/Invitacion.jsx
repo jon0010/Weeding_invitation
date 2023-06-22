@@ -172,7 +172,7 @@ const Invitacion = () => {
       <div className="row position-relative">
         <img
           src={isMobile ? ringCelu2 : ringPC}
-          className="bg-img-fluid"
+          className="bg-img-fluid m-0 p-0"
           alt="fondo"
         />
         <div
@@ -192,7 +192,7 @@ const Invitacion = () => {
         <hr />
       </div>
       <div className="row">
-        <div className="col-12 text-center p-4 fs-2 fontCustom4">
+        <div className="col-12 text-center py-4 fs-2 fontCustom4">
           {" "}
           El día más importante de nuestras vidas ha llegado y queremos que seas
           parte de él
@@ -216,7 +216,7 @@ const Invitacion = () => {
         <hr />
       </div>
       <div className="row">
-        <div className="col-12 text-center p-4 fs-2 mb-5 fontCustom4">
+        <div className="col-12 text-center py-4 fs-2 mb-5 fontCustom4">
           Con nuestro amor, la bendición de Dios y la de nuestros padres
         </div>
       </div>
@@ -234,7 +234,7 @@ const Invitacion = () => {
       </div>
       <hr />
       <div className="row">
-        <div className="col-12 text-center p-4 fs-2 fontCustom4">
+        <div className="col-12 text-center py-4 fs-2 fontCustom4">
           Tu presencia es importante para nosotros, nos gustaría mucho que nos
           acompañaras
         </div>
@@ -276,7 +276,7 @@ const Invitacion = () => {
       </div>
       <hr />
       <div className="row">
-        <div className="col-12 text-center p-4 fs-2 fontCustom4">
+        <div className="col-12 text-center py-4 fs-2 fontCustom4">
           ¡Que nos acompañes es lo más importante! Y si está en tu disposición
           realizar una muestra de cariño, estaremos muy agradecidos
         </div>
@@ -362,7 +362,7 @@ const Invitacion = () => {
       </div>
 
       <div className="row">
-        <div className="col-12 text-center p-4 fs-2 fontCustom4">
+        <div className="col-12 text-center py-4 fs-2 fontCustom4">
           Nos encantaría que nos acompañes en este día tan especial
         </div>
       </div>
