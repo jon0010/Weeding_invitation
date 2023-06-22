@@ -176,10 +176,13 @@ const Invitacion = () => {
           alt="fondo"
         />
         <div
-          className="col-md-6 col-sm mx-auto position-absolute text-center text-dark fontCustom3 ms-2"
+          className="col-md-12 col-sm position-absolute text-dark fontCustom3 ms-2"
           style={{
             fontSize: "9em",
             textShadow: "0px 0px 10px gold",
+            top: 0,
+            right: 0,
+            transform: "translate(50%, 40%)",
           }}
         >
           <br className="d-md-none" />
