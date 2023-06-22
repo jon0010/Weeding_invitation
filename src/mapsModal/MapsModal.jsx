@@ -1,8 +1,10 @@
 import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import { REACT_APP_GOOGLE_MAPS_API_KEY } from "../../variable";
 
 const MapModal = ({ isOpen, onClose }) => {
+  const VITE_APP_GOOGLE_MAPS_API_KEY = import.meta.env
+    .VITE_APP_GOOGLE_MAPS_API_KEY;
+
   const mapContainerStyle = {
     width: "100%",
     height: "400px",
@@ -14,7 +16,7 @@ const MapModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <LoadScript googleMapsApiKey={REACT_APP_GOOGLE_MAPS_API_KEY}>
+    <LoadScript googleMapsApiKey={VITE_APP_GOOGLE_MAPS_API_KEY}>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={center}
