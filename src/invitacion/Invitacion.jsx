@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./invitacion.css";
 import Countdown from "react-countdown";
 import iglesia from "../assets/iglesia.jpg";
@@ -13,6 +13,9 @@ import Footer from "../footer/Footer";
 import ringCelu2 from "../assets/ringCelu2.jpeg";
 import ringPC from "../assets/ringPC.jpeg";
 import "animate.css";
+import backgroundMusic from "../assets/OSTDBGT.mp3";
+import { VolumeUp, VolumeOff, Opacity } from "@mui/icons-material";
+import { useMediaQuery } from "react-responsive";
 
 const LargeEmailIcon = styled(EmailIcon)`
   font-size: 5em;
@@ -21,6 +24,18 @@ const LargeEmailIcon = styled(EmailIcon)`
 const Invitacion = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(true);
+  const isSmallScreen = useMediaQuery({ maxWidth: 576 });
+
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    if (isMusicPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isMusicPlaying]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -168,7 +183,38 @@ const Invitacion = () => {
   const targetDateTime = targetDate.getTime();
 
   return (
-    <div className="container-fluid backgroundContainer m-0 p-0">
+    <div
+      className="container-fluid backgroundContainer m-0 p-0"
+      style={{ overflowX: "hidden" }}
+    >
+      <audio ref={audioRef} loop>
+        <source src={backgroundMusic} type="audio/mp3" />
+        Tu navegador no soporta la reproducción de audio.
+      </audio>
+      <button
+        style={{
+          backgroundColor: "transparent",
+          border: "none",
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          zIndex: "9999",
+          fontSize: isSmallScreen ? "0.6em" : "1.3em",
+          marginBottom: isSmallScreen ? "80px" : "40px",
+          color: "#897E7E",
+          opacity: 1,
+        }}
+        onClick={() => setIsMusicPlaying(!isMusicPlaying)}
+      >
+        {isMusicPlaying ? (
+          <VolumeUp style={{ fontSize: "6em" }} />
+        ) : (
+          <>
+            <VolumeOff style={{ fontSize: "6em" }} />
+            <span hidden>Botón adicional</span>
+          </>
+        )}
+      </button>
       <div className="row position-relative">
         <img
           src={isMobile ? ringCelu2 : ringPC}
@@ -202,7 +248,6 @@ const Invitacion = () => {
         </div>
       </div>
       <hr />
-
       <div className="row">
         <div className="col-12 col-sm-8 mt-5 mx-auto text-center fontCustom2">
           <h2>Te invitamos a nuestra boda</h2>
@@ -211,7 +256,6 @@ const Invitacion = () => {
           <h2>Faltan:</h2>
         </div>
       </div>
-
       <div className="row">
         <div className="col-md-4 col-12 mx-auto d-flex justify-content-between flex-wrap mt-2 mb-3">
           <Countdown date={targetDateTime} renderer={renderer} />
@@ -363,7 +407,6 @@ const Invitacion = () => {
           <img src={final} alt="fotoFinal" className="img-fluid" />
         </div>
       </div>
-
       <div className="row">
         <div className="col-12 text-center py-4 fs-2 fontCustom4">
           Nos encantaría que nos acompañes en este día tan especial
