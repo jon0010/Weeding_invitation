@@ -5,8 +5,8 @@ import iglesia from "../assets/iglesia.jpg";
 import MapModal from "../mapsModal/MapsModal";
 import EmailIcon from "@mui/icons-material/Email";
 import { styled } from "@mui/system";
-import siluetaM from "../assets/siluetaM.png";
-import siluetaF from "../assets/siluetaF.png";
+import siluetaFem from "../assets/siluetaFem.png";
+import siluetaMasc from "../assets/siluetaMasc.png";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import final from "../assets/final.jpg";
 import Footer from "../footer/Footer";
@@ -14,7 +14,7 @@ import ringCelu2 from "../assets/ringCelu2.jpeg";
 import ringPC from "../assets/ringPC.jpeg";
 import "animate.css";
 import backgroundMusic from "../assets/OSTDBGT.mp3";
-import { VolumeUp, VolumeOff, Opacity } from "@mui/icons-material";
+import { VolumeUp, VolumeOff } from "@mui/icons-material";
 import { useMediaQuery } from "react-responsive";
 
 const LargeEmailIcon = styled(EmailIcon)`
@@ -345,24 +345,38 @@ const Invitacion = () => {
       <div className="row">
         <div className="col-md-12 col-12 mx-auto text-center fontCustom4">
           <h3 className="fs-1">Código de Vestimenta</h3>
-          <div className="row justify-content-center align-items-center mt-3">
-            <div className="col-6">
-              <img
-                src={siluetaM}
-                alt="siluetaH"
-                className="img-fluid mx-auto mb-sm-0 ms-5"
-                style={{ maxWidth: "160px" }}
-              />
-            </div>
-            <div className="col-6">
-              <img
-                src={siluetaF}
-                alt="siluetaF"
-                className="img-fluid mx-auto"
-                style={{ maxWidth: "160px" }}
-              />
+          <div className="container mt-3">
+            <div className="container mt-3">
+              <div className="row row-cols-sm-1 row-cols-md-2 justify-content-sm-center">
+                <div className="col d-flex justify-content-center mb-3">
+                  <img
+                    src={siluetaMasc}
+                    alt="siluetaH"
+                    className="mx-auto mb-sm-0 me-sm-5"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      maxWidth: "440px",
+                      maxHeight: "470px",
+                    }}
+                  />
+                </div>
+                <div className="col d-flex justify-content-center">
+                  <img
+                    src={siluetaFem}
+                    alt="siluetaF"
+                    className="mx-auto"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      maxWidth: "440px",
+                    }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
+
           <p className="mt-4 fs-2 mb-5">Elegante Sport</p>
         </div>
       </div>
