@@ -11,7 +11,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import final from "../assets/final.jpg";
 import Footer from "../footer/Footer";
 import ringCelu2 from "../assets/ringCelu2.jpeg";
-import ringPC from "../assets/ringPC.jpeg";
+import ringPC from "../assets/ringPC.jpg";
 import "animate.css";
 import backgroundMusic from "../assets/OSTDBGT.mp3";
 import { VolumeUp, VolumeOff } from "@mui/icons-material";
