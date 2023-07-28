@@ -76,3 +76,12 @@
     margin-top: 2em;
   }
 }
+
+@media (max-width: 540px) {
+  .logo {
+    height: 18em;
+    width: 10em;
+    margin-right: 2em;
+    margin-top: 2em;
+  }
+}
