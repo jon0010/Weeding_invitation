@@ -417,7 +417,7 @@ const Invitacion = () => {
       </div>
       <hr />
       <div className="row">
-        <div className="col-md-12 col-sm-12 mx-auto text-center">
+        <div className="col-md-6 col-sm-12 mx-auto text-center">
           <img src={final} alt="fotoFinal" className="img-fluid" />
         </div>
       </div>
