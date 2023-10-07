@@ -85,7 +85,7 @@ const Invitacion = () => {
 
   const Completionist = (
     <p className="col-12 text-center py-4 fs-2 fontCustom4">
-      ¡Se celebró la boda! ¡Vivan los Novios!
+      ¡Ya se celebró la boda! ¡Vivan los Novios!
     </p>
   );
 
@@ -257,7 +257,6 @@ const Invitacion = () => {
           <h2>Te invitamos a nuestra boda</h2>
           <h2>Viernes 6 de Octubre 2023</h2>
           <h2>¡Nos casamos!</h2>
-          <h2>Faltan:</h2>
         </div>
       </div>
       <div className="row">
@@ -310,6 +309,10 @@ const Invitacion = () => {
           <br />
           <p className="col-12 text-center p-3 fs-4 fontCustom2">
             Avenida Presidente Perón 2758 - San Justo
+          </p>
+          <br />
+          <p className="col-12 text-center py-4 fs-2 fontCustom2">
+            a las 19.00 horas
           </p>
           <button className="botonMapa mb-4" onClick={handleButtonClick}>
             Ver ubicación
