@@ -83,11 +83,15 @@ const Invitacion = () => {
     window.open(url);
   };
 
-  const Completionist = <p>¡Se celebró la boda! ¡Vivan los Novios!</p>;
+  const Completionist = (
+    <p className="col-12 text-center py-4 fs-2 fontCustom4">
+      ¡Se celebró la boda! ¡Vivan los Novios!
+    </p>
+  );
 
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
-      return <Completionist />;
+      return Completionist;
     } else {
       return (
         <div className="col-md-12 col-12 mx-auto mb-2">
